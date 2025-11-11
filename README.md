@@ -47,8 +47,11 @@ It simplifies the scouting process, helping both **players** and **clubs** save 
 
 ---
 
+## Visite the Website
+[EA Football Talent ⚽](https://a-mansur.github.io/Eafootballtallent/)
+
 ## 📸 Preview (optional)
 
-You can add a screenshot or image preview here once your project is hosted or has visuals, for example:  
-```md
-![EA Football Talent Screenshot](assets/screenshot.png)
+![EA Football Talent Screenshot coming soon](assets/screenshot.png)
+
+
