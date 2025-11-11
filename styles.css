@@ -1,0 +1,773 @@
+:root {
+    --bg-color: #DFE1DE;
+    --primary-color: #002C7C;
+    --primary-hover: #0156b7;
+    --secondary-color: #E5B200;
+    --banner-bg: #ffc400;
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --text-color: #252525ee;
+    --footer-color: #343A40;
+    --border-color: #cccccc;
+    --input-bg: #f9f9f9;
+    --heading-color: #333333;
+    --paragraph-color: #666666;
+    --secondary-hover: #eeeeee;
+    --circle-overlay: rgba(255, 255, 255, 0.2);
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: var(--bg-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ---------- Header Styling ---------- */
+
+header {
+    background-color: var(--white-color);
+    box-shadow: 0 10px 40px 3px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--black-color);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin-left: 20px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--primary-hover);
+}
+
+nav .register {
+    padding: 8px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+
+/* ---------- Hero Section Styling (The Big Blue Block) ---------- */
+
+.hero__section {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 80px 15px;
+}
+
+.hero__content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero__content p:last-of-type {
+    font-size: 1.15em;
+    margin-bottom: 25px;
+}
+
+/* ---------- All button styling ---------- */
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s;
+    border: none;
+    font-size: 1em;
+}
+
+.btn.primary {
+    background-color: var(--banner-bg);
+    color: var(--text-color);
+}
+
+.btn.primary:hover {
+    background-color: #ffeb3b;
+    color: #000000;
+}
+
+.btn.secondary {
+    background-color: var(--white-color);
+    color: var(--heading-color);
+    border: 1px solid var(--border-color);
+    padding: 10px 20px;
+    width: 100%;
+    max-width: 200px;
+    margin-top: auto;
+}
+
+.btn.secondary:hover {
+    background-color: var(--secondary-hover);
+}
+
+.btn.secondary.disabled__btn {
+    background-color: #f0f0f0;
+    color: #999;
+    cursor: default;
+    opacity: 0.8;
+}
+
+/* ---------- Feature Cards Section Styling ---------- */
+
+.feature__cards {
+    padding: 60px 0;
+    background-color: var(--bg-color);
+}
+
+.cards__wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+.card {
+    flex: 1;
+    background-color: var(--white-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #0001;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: var(--heading-color);
+}
+
+.card p {
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+/* ------------ Footer Styling ------------ */
+
+footer {
+    background-color: var(--footer-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+/* -------- Responsive Design (Media Queries) -------- */
+
+/* --------- For screens smaller than 768px (Tablets and smaller) --------- */
+@media (max-width: 768px) {
+    .hero__section {
+        padding: 60px 15px;
+    }
+
+    .hero__section h1 {
+        font-size: 2.5em;
+    }
+
+    .cards__wrapper {
+        flex-direction: column;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+}
+
+/* -------- For screens smaller than 576px (Mobile Phones) -------- */
+
+@media (max-width: 576px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+
+    .register {
+        padding: 5px 50px;
+    }
+
+    .hero__content h1 {
+        font-size: 2em;
+    }
+
+    .btn.primary {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .btn.secondary {
+        max-width: 100%;
+    }
+}
+
+/* ---------- Sign in styling ---------- */
+
+.signin__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.signin__form {
+    background-color: var(--white-color);
+    padding: 2em;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border: 1px solid var(--border-color);
+    width: 100%;
+    max-width: 380px;
+    /* margin: 0 auto; */
+}
+
+.signin__title {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 1.3rem;
+    color: var(--primary-color);
+}
+
+.signin__form h1 {
+    font-size: 2.2em;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: var(--heading-color);
+}
+
+.signin__form p {
+    font-size: 1em;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+/* --- Reusable INPUT fields --- */
+
+.form__content {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 400;
+    margin-bottom: 2px;
+    color: var(--text-color);
+    font-size: 0.85em;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="password"] {
+    margin-bottom: .5rem;
+    padding: 8px 12px;
+    font-size: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: var(--input-bg);
+    letter-spacing: 0.9px;
+}
+
+
+input:focus {
+    border-color: #0077ff;
+    box-shadow: 0 0 0 3px rgba(0, 119, 255, 0.15);
+    background-color: var(--white-color);
+}
+
+.forgot__password {
+    margin-bottom: 1.3rem;
+    text-align: right;
+}
+
+/* ---------- REUSABLE LINK STYLING ---------- */
+
+.link-underline {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.link-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1.5px;
+    background-color: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.link-underline:hover::after {
+    transform: scaleX(1);
+}
+
+#signinBtn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-size: 1em;
+    background: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
+    transition: background 0.3s ease;
+}
+
+#signinBtn:hover {
+    background: var(--primary-hover);
+}
+
+
+/* ---------- SEPARATOR & JOIN ---------- */
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: var(--border-color);
+}
+
+.signin__form .join__us {
+    font-size: 1em;
+}
+
+.join__us a {
+    font-size: 1em;
+}
+
+/* ---------- RESPONSIVENESS ---------- */
+
+@media (max-width: 768px) {
+  .signin__form {
+    max-width: 90%;
+    padding: 1.5em;
+  }
+
+  .signin__form h1 {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 576px) {
+  .signin__form {
+    padding: 1.2em;
+  }
+
+  .signin__form h1 {
+    font-size: 1.5em;
+  }
+
+  input {
+    font-size: 14px;
+  }
+
+  .signin__form .join__us {
+    font-size: 0.9em;
+    }
+}
+
+/* ---------- SIGN UP STYLING ---------- */
+
+#signup__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.signup__container {
+    display: flex;
+    width: 880px;
+    max-width: 90%;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* -------------- LEFT SIDE -------------- */
+
+.signup__container .left__banner {
+    background-color: var(--banner-bg);
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.left__banner h1 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
+.left__banner p {
+    font-size: 14px;
+}
+
+.circle__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    background-color: var(--circle-overlay);
+    border-radius: 50%;
+    margin-bottom: 40px;
+}
+
+
+.right__form__panel {
+    position: relative;
+    width: 60%;
+    padding: 30px 40px;
+    background-color: var(--white-color);
+}
+
+.right__form__panel .scroll__small {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.right__form__panel h2 {
+    font-size: 1.7em;
+    margin-bottom: 20px;
+    color: var(--heading-color);
+}
+
+.role__selector {
+    display: flex;
+    margin-bottom: 1rem;
+    font-size: 0.9em;
+}
+
+.role__tab {
+    padding-bottom: .5rem;
+    margin-right: 15px;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.role__tab.active {
+    color: var(--primary-color);
+    font-weight: bold;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.role-tab:hover {
+    color: var(--primary-hover);
+}
+
+.role-tab.active {
+    color: var(--primary-color);
+    font-weight: bold;
+    border-bottom: 2px solid var(--color-primary-hover);
+}
+
+.form__container {
+    position: relative;
+    min-height: 400px;
+}
+
+.registration__form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    max-height: 450px;
+    overflow: auto;
+    transition: all 0.4s ease;
+    background-color: var(--white-color);
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.registration__form::-webkit-scrollbar {
+    display: none;
+}
+
+.registration__form.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+    z-index: 1;
+}
+
+.input__int {
+    font-size: .78em;
+    color: var(--muted-text);
+    margin-bottom: .5rem;
+}
+
+.password__hint {
+    list-style-type: disc;
+    margin: 5px 0 15px 20px;
+    font-size: .78em;
+    color: var(--muted-text);
+}
+
+.password__hints li {
+    margin-top: .5rem;
+}
+
+.create__button {
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+.create__button:hover {
+    background-color: var(--primary-hover);
+}
+
+.login__link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.login__link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+/* Media Queries for smaller Screens */
+
+@media (max-width: 768px) {
+    .signup__container {
+        flex-direction: column;
+        width: 100%;
+        max-width: 450px;
+        margin: 1rem;
+    }
+
+    .signup__container .left__banner  {
+        width: 100%;
+        border-radius: 12px 12px 0 0;
+        padding: 30px;
+    }
+
+    .right__form__panel {
+        width: 100%;
+    }
+
+    .circle__image {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 1rem;
+    }
+
+    .circle__image img {
+        width: 100%;
+    }
+
+    .left__banner h1 {
+        font-size: 1.3em;
+    }
+
+    .right__form__panel {
+        padding: 1rem;
+    }
+
+    .right__form__panel h2 {
+        font-size: 1.3em;
+        margin-bottom: .7rem;
+    }
+
+    .role__selector {
+        margin-bottom: 1rem;
+    }
+}
+
+
+/* ------------- Scroll Down Indicator ------------- */
+
+.scroll__indicator {
+    position: absolute;
+    bottom: 3px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.6s ease;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.mouse {
+    width: 18px;
+    height: 28px;
+    border: 1px solid var(--primary-color);
+    border-radius: 14px;
+    position: relative;
+}
+
+.wheel {
+    width: 4px;
+    height: 6px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll-wheel 1.4s infinite;
+}
+
+@keyframes scroll-wheel {
+    0% { opacity: 1; top: 8px;}
+    50% {opacity: 0.6; top: 14px;}
+    100% {opacity: 0; top: 18px;}
+}
+
+.scroll__text {
+    font-size: 10px;
+    margin-top: 4px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.scroll__indicator.hide {
+    opacity: 0;
+    transition: opacity 0.6s easy;
+}
+
+/* ----------- RESPONSIVENESS ----------- */
+
+@media (max-width: 900px) {
+  .signup__container {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .left__banner,
+  .right__form__panel {
+    width: 100%;
+  }
+
+  .left__banner {
+    padding: 30px 15px;
+  }
+
+  .right__form__panel {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .left__banner h1 {
+    font-size: 20px;
+  }
+
+  .right__form__panel h2 {
+    font-size: 18px;
+  }
+
+  input,
+  .create__button {
+    font-size: 14px;
+  }
+
+  /* .scroll__big {
+    display: none;
+  } */
+
+
+
+  .scroll__indicator {
+    display: none;
+  }
+
+  .mouse {
+    width: 15px;
+    height: 25px;
+  }
+
+  .scroll__text {
+    font-size: 0.3em;
+  }
+}

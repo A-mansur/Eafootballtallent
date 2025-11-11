@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="signup__body">
+    <div class="signup__container">
+        <div class="left__banner">
+            <div class="circle__image">
+                <img src="assets/player-img.png" alt="Player image">
+            </div>
+            <h1>Let's get you set up</h1>
+            <p>It should only a couple of minutes to. create your account.</p>
+        </div>
+
+        <div class="right__form__panel">
+            <h2>Create Your Account</h2>
+
+            <div class="role__selector">
+                <span id="player__tab" class="role__tab active">I'm a player</span>
+                <span id="club__tab" class="role__tab">I'm a Club/Scout/Agent</span>
+
+                
+            </div>
+
+            <div class="form__container">
+                <form id="player__form" class="registration__form">
+                    <label for="p__username">Username:</label>
+                    <input type="text" id="p__username" required>
+                    <p class="input__int">Required. 150 characters or fewer . letters, digits and @/ ./+/-/_ only</p>
+
+                    <label for="p__firstname">First name:</label>
+                    <input type="text" id="p__firstname" required>
+
+                    <label for="p__lastname">Last name:</label>
+                    <input type="text" id="p__lastname" required>
+
+                    <label for="p__email">Email:</label>
+                    <input type="email" id="p__email" required>
+
+                    <label for="p__password">Password:</label>
+                    <input type="password" id="p__password" required>
+
+                    <ul class="password__hint">
+                        <li>Your password can't be too similar to your other personal information.</li>
+                        <li>Your password must contain at least 8 characters.</li>
+                        <li>Your password can't be a commonly used password.</li>
+                        <li>Your password can't be entirely numeric.</li>
+                    </ul>
+
+                    <label for="p__confirm__password">Password confirmation:</label>
+                    <input type="password" id="p__confirm__password" required>
+                    <p class="input__hint">Enter the same password as before, for verification.</p>
+
+                    <label for="p__country">Country:</label>
+                    <input type="text" id="p__country" required>
+
+                    <label for="p__position">Position:</label>
+                    <input type="text" id="p__position" required>
+
+                    <label for="p__dob">Date of birth:</label>
+                    <input type="date" id="p__dob" placeholder="dd/mm/yyyy" required>
+
+                    <button type="submit" class="create__button player__button">Create Player Account</button>
+
+                    <!------------ Scroll Down Indicator ------------>
+
+                    <div class="scroll__indicator" id="fromScrollIndicator">
+                        <div class="mouse">
+                            <div class="wheel"></div>
+                        </div>
+                        <p class="scroll__text">Scroll Down</p>
+                    </div>
+                </form>
+
+                <!---------------- Second Form ---------------->
+
+                <form id="club__form" class="registration__form hidden">
+                    <label for="c__username">Username:</label>
+                    <input type="text" id="c__username" required>
+
+                    <label for="c__password">Password:</label>
+                    <input type="text" id="c__password" placeholder="" required>
+
+                    <label for="c__confirm-password">Password confirmation:</label>
+                    <input type="password" id="c__confirm-password" placeholder="" required>
+
+                    <label for="c__clubname">Club name:</label>
+                    <input type="text" id="c__clubname" placeholder="" required>
+
+                    <label for="c__country">Country:</label>
+                    <input type="text" id="c__country" placeholder="" required>
+
+                    <button type="submit" class="create__button club-button">Create Club Account</button>
+                </form>
+            </div>
+
+            <p class="login__link link">Already have an account? <a href="signin.html" class="link-underline">Log In</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
