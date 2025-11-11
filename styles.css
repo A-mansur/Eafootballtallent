@@ -24,7 +24,14 @@
     font-family: 'Roboto', sans-serif;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     line-height: 1.6;
     background-color: var(--bg-color);
 }
@@ -92,6 +99,10 @@ nav .register {
 .hero__content p:last-of-type {
     font-size: 1.15em;
     margin-bottom: 25px;
+}
+
+main {
+    flex: 1;
 }
 
 /* ---------- All button styling ---------- */
